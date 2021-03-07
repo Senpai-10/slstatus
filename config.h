@@ -70,5 +70,5 @@ static const struct arg args[] = {
 	{ temp      ,   "[CPU  %s\u00b0C] | "  , "/sys/class/thermal/thermal_zone0/temp" },
 	{ cpu_perc  ,   "[CPU  %s%] | "        , NULL },
 	{ ram_perc  ,   "[RAM  %s%] | "     	, NULL },
-	{ datetime  ,   "%s"                 	," %F %T" },
+	{ datetime  ,   "%s"                 	, "%Y/%m/%d %A %I:%M:%S %p" },
 };
