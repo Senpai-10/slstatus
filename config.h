@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#define TempPath "~/wm/slstatus/temp.sh"
+
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
 
@@ -65,10 +67,10 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function     format               	argument */
-	{ uptime    ,   " uptime %s | "         , NULL },
-	{ keymap    ,   "layout %s | "          , NULL },
-	{ temp      ,   "[CPU  %s\u00b0C] | "  , "/sys/class/thermal/thermal_zone0/temp" },
-	{ cpu_perc  ,   "[CPU  %s%] | "        , NULL },
-	{ ram_perc  ,   "[RAM  %s%] | "     	, NULL },
-	{ datetime  ,   "%s"                 	, "%Y/%m/%d %A %I:%M:%S %p" },
+	{ uptime      	,   " uptime %s | "         , NULL },
+	{ keymap        ,   "layout %s | "          , NULL },
+	{ run_command   ,   "%s"                    , TempPath },
+	{ cpu_perc 	,   "[CPU  %s%] | "        , NULL },
+	{ ram_perc  	,   "[RAM  %s%] | "     	, NULL },
+	{ datetime  	,   "%s"                 	, "%Y/%m/%d %A %I:%M:%S %p" },
 };
