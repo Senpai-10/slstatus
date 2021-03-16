@@ -72,5 +72,5 @@ static const struct arg args[] = {
 	{ run_command   ,   "%s"                    , TempPath },
 	{ cpu_perc 	,   "[CPU  %s%] | "        , NULL },
 	{ ram_perc  	,   "[RAM  %s%] | "     	, NULL },
-	{ datetime  	,   "%s"                 	, "%Y/%m/%d %A %I:%M:%S %p" },
+	{ datetime  	,   "%s"                 	, "%Y/%m/%d %A %I:%M:%S %p " },
 };
