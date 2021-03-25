@@ -1,16 +1,7 @@
-# Temp="$(cat /sys/class/thermal/thermal_zone0/temp)/1000 | bc"
-
 TempCat=$(cat /sys/class/thermal/thermal_zone0/temp)
 Temp=${TempCat:: -3}
 
-if [ "$Temp" -gt 80 ]; then
-    echo "[CPU  $Temp°C] | "
-elif [ "$Temp" -gt 70 ]; then
-    echo "[CPU  $Temp°C] | "
-elif [ "$Temp" -gt 40 ]; then
-    echo "[CPU  $Temp°C] | "
-else
-    echo "[CPU  $Temp°C] | "
-
-fi
-# [CPU  %s\u00b0C]
+[[ "$Temp" -gt 80 ]] && echo -e "[CPU \uf769 $Temp°C] | "
+[[ "$Temp" -gt 70 ]] && echo -e "[CPU \uf2c8 $Temp°C] | "
+[[ "$Temp" -gt 40 ]] && echo -e "[CPU \uf2c9 $Temp°C] | "
+[[ "$Temp" -lt 40 ]] && echo -e "[CPU \uf76b $Temp°C] | "
