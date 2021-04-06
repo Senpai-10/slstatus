@@ -1,8 +1,5 @@
 /* See LICENSE file for copyright and license details. */
 
-#define temp "~/wm/slstatus/temp.sh"
-#define weather "~/wm/slstatus/weather.sh"
-
 /* interval between updates (in ms) */
 const unsigned int interval = 1000;
 
@@ -70,9 +67,11 @@ static const struct arg args[] = {
 	/* function     format               	argument */
 	{ uptime      	,   " uptime %s | "         , NULL },
 	{ keymap        ,   "layout %s | "          , NULL },
-	{ run_command   ,   "%s"    				, weather},
-	{ run_command   ,   "%s"                    , temp },
+    { run_command   ,   "%s"    				, "/home/$USER/wm/slstatus/network.sh"},
+    { run_command   ,   "%s"    				, "/home/$USER/wm/slstatus/weather.sh"},
+	{ run_command   ,   "%s"                    , "/home/$USER/wm/slstatus/temp.sh" },
 	{ cpu_perc 	    ,   "[CPU  %s%] | "        , NULL },
 	{ ram_perc  	,   "[RAM  %s%] | "     	, NULL },
 	{ datetime  	,   "%s"                 	, "%Y/%m/%d %A %I:%M:%S %p " },
 };
+// 148
