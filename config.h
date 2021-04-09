@@ -67,11 +67,11 @@ static const struct arg args[] = {
 	/* function     format               	argument */
 	{ uptime      	,   " uptime %s | "         , NULL },
 	{ keymap        ,   "layout %s | "          , NULL },
-    { run_command   ,   "%s"    				, "/home/$USER/wm/slstatus/network.sh"},
-    { run_command   ,   "%s"    				, "/home/$USER/wm/slstatus/weather.sh"},
-	{ run_command   ,   "%s"                    , "/home/$USER/wm/slstatus/temp.sh" },
+    { run_command   ,   "%s"    				, "/home/$USER/wm/slstatus/scripts/network.sh"},
+    //{ run_command   ,   "%s"    				, "/home/$USER/wm/slstatus/scripts/weather.sh"},
+    { run_command   ,   "%s"                	, "/home/$USER/wm/slstatus/scripts/volume.sh" },
+    { run_command   ,   "%s"                    , "/home/$USER/wm/slstatus/scripts/temp.sh" },
 	{ cpu_perc 	    ,   "[CPU  %s%] | "        , NULL },
 	{ ram_perc  	,   "[RAM  %s%] | "     	, NULL },
 	{ datetime  	,   "%s"                 	, "%Y/%m/%d %A %I:%M:%S %p " },
 };
-// 148
